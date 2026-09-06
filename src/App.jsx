@@ -78,8 +78,8 @@ export default function App() {
         lang={lang}
       />
 
-      {/* 11. Floating Accessibility Icon */}
-      <FloatingBar />
+      {/* 11. Floating Accessibility & WhatsApp Chat Bar */}
+      <FloatingBar lang={lang} />
     </div>
   );
 }
