@@ -476,20 +476,21 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 ------------------------------------------------------------- */
 .fullscreen-nav-overlay {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  height: 100dvh;
   background: #0c0f12;
   z-index: 999999;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
   overflow-y: auto;
-  padding: 36px 24px;
+  -webkit-overflow-scrolling: touch;
+  padding: clamp(20px, 4vh, 36px) clamp(16px, 3vw, 24px);
   transition: opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.35s;
 }
 
@@ -515,8 +516,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   z-index: 2;
   display: flex;
   flex-direction: column;
-  gap: 32px;
-  margin: auto;
+  gap: 28px;
+  margin: auto 0;
 }
 
 .overlay-topbar {
@@ -1881,58 +1882,394 @@ textarea.input-omara {
 }
 
 /* -------------------------------------------------------------
-   RESPONSIVE MEDIA QUERIES
+   RESPONSIVE MEDIA QUERIES (Mobile-First Polish)
 ------------------------------------------------------------- */
+
+/* Touch screens: Disable custom cursor to prevent touch interference */
+@media (hover: none), (pointer: coarse) {
+  .custom-cursor-container {
+    display: none !important;
+  }
+}
+
+/* 1. TABLET BREAKPOINT (<= 1024px) */
 @media (max-width: 1024px) {
+  .wrap {
+    padding: 0 24px;
+  }
+
   .bento-grid {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
+    gap: 16px;
   }
+
   .bento-card.tall {
     grid-column: span 2;
-    min-height: 380px;
+    min-height: 320px;
+    padding: 28px 24px;
   }
+
+  .credentials-grid-omara {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
   .focus-card-layout {
     grid-template-columns: 1fr;
     gap: 24px;
   }
+
   .focus-header-omara {
     flex-direction: column;
     gap: 16px;
+    align-items: flex-start;
   }
+
   .focus-intro-right {
     text-align: left;
     max-width: 100%;
   }
-  .credentials-grid-omara, .testimonials-grid-omara, .metric-strip-omara {
-    grid-template-columns: 1fr;
+
+  .testimonials-grid-omara {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
   }
 }
 
-@media (max-width: 768px) {
-  .desktop-nav-links, .header-referral-link, .header-phone-link {
-    display: none;
+/* 2. OVERLAY MENU BREAKPOINT (<= 860px) */
+@media (max-width: 860px) {
+  .overlay-main-grid {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 22px;
   }
+
+  .overlay-chamber-col {
+    padding: 22px 18px;
+    gap: 12px;
+  }
+
+  .menu-option-card {
+    padding: 13px 16px;
+  }
+}
+
+/* 3. MOBILE LANDSCAPE & PORTRAIT BREAKPOINT (<= 768px) */
+@media (max-width: 768px) {
+  .wrap {
+    padding: 0 16px;
+  }
+
+  /* Header adjustments */
+  .site-header {
+    padding: 14px 0;
+  }
+
+  .site-header.is-scrolled-transparent {
+    padding: 10px 0;
+  }
+
+  .header-inner-fluid {
+    padding: 0 16px;
+  }
+
+  .brand-script {
+    font-size: 1.24rem;
+  }
+
+  .brand-script span {
+    font-size: 0.68rem;
+    letter-spacing: 0.08em;
+  }
+
+  .header-phone-link {
+    display: none !important;
+  }
+
+  .header-right {
+    gap: 10px;
+  }
+
+  /* Hero adjustments */
+  .hero-omara {
+    padding: 24px 0 44px;
+  }
+
   .bento-grid {
     grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 14px;
   }
+
   .bento-card.tall {
     grid-column: span 1;
+    grid-row: auto;
+    min-height: auto;
+    padding: 24px 18px;
   }
+
+  .tall-welcome {
+    font-size: clamp(1.45rem, 5.5vw, 1.95rem);
+    line-height: 1.2;
+  }
+
+  .tall-subtitle {
+    font-size: 0.94rem;
+  }
+
+  .bento-card.item {
+    min-height: 120px;
+    padding: 16px;
+  }
+
+  .placeholder-inner-frame {
+    padding: 14px 10px;
+  }
+
+  .placeholder-title {
+    font-size: 0.88rem;
+  }
+
+  .placeholder-sub {
+    font-size: 0.74rem;
+  }
+
+  /* Credentials Section */
+  .credentials-omara {
+    padding: 44px 0 52px;
+  }
+
+  .credentials-grid-omara {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .cred-card-omara {
+    padding: 20px 18px;
+  }
+
+  /* Areas of Focus */
+  .focus-areas-section {
+    padding: 56px 0 64px;
+  }
+
+  .focus-header-omara {
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 30px;
+  }
+
+  .focus-heading-left {
+    font-size: clamp(1.8rem, 6vw, 2.3rem);
+  }
+
+  .focus-intro-right {
+    text-align: left;
+    font-size: 0.92rem;
+  }
+
+  .focus-cards-stack {
+    gap: 20px;
+  }
+
+  .focus-card-green {
+    padding: 24px 18px;
+    border-radius: 14px;
+  }
+
+  .focus-card-top-tag {
+    margin-bottom: 18px;
+    font-size: 0.82rem;
+  }
+
+  .focus-card-layout {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .focus-img-placeholder {
+    aspect-ratio: 16 / 9;
+    max-height: 160px;
+    width: 100%;
+  }
+
+  .focus-headline-col h3 {
+    font-size: clamp(1.35rem, 5vw, 1.7rem);
+  }
+
+  .btn-white-pill {
+    width: 100%;
+    justify-content: center;
+    padding: 12px 20px;
+  }
+
+  /* Testimonials */
+  .testimonials-section {
+    padding: 56px 0 64px;
+  }
+
+  .testimonials-header-omara {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+    margin-bottom: 28px;
+  }
+
+  .testimonials-title-omara {
+    font-size: clamp(1.8rem, 6vw, 2.3rem);
+  }
+
+  .testimonials-grid-omara {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .testimonial-card-omara {
+    padding: 22px 18px;
+  }
+
+  /* Consultation Form */
+  .consultation-omara {
+    padding: 56px 0 64px;
+  }
+
+  .consultation-box {
+    padding: 24px 18px;
+    border-radius: 14px;
+  }
+
   .form-grid-2 {
     grid-template-columns: 1fr;
+    gap: 14px;
+    margin-bottom: 14px;
   }
+
+  .form-field {
+    margin-bottom: 14px;
+  }
+
+  /* Set input font-size >= 16px to prevent iOS auto-zoom */
+  .input-omara {
+    font-size: 16px !important;
+    padding: 13px 14px;
+  }
+
+  .btn-submit-omara {
+    padding: 14px;
+    font-size: 1rem;
+  }
+
+  /* Footer */
+  .site-footer {
+    padding: 40px 0 24px;
+  }
+
+  .footer-top-row {
+    flex-direction: column;
+    gap: 18px;
+    margin-bottom: 24px;
+    padding-bottom: 20px;
+  }
+
+  .footer-bottom-row {
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+  }
+}
+
+/* 4. COMPACT MOBILE BREAKPOINT (<= 600px) */
+@media (max-width: 600px) {
+  /* Hide the desktop Contact Us button in header on small phones so brand and menu remain spacious */
+  .header-contact-btn {
+    display: none !important;
+  }
+
+  .header-right {
+    gap: 8px;
+  }
+
+  .brand-script {
+    font-size: 1.15rem;
+  }
+
+  .brand-script span {
+    font-size: 0.65rem;
+  }
+
+  .lang-switch-pill button {
+    padding: 2px 8px;
+    font-size: 0.74rem;
+  }
+
+  .overlay-topbar {
+    padding-bottom: 14px;
+  }
+
+  .overlay-top-actions {
+    gap: 10px;
+  }
+
+  .overlay-close-btn {
+    padding: 6px 14px;
+    font-size: 0.8rem;
+  }
+}
+
+/* 5. NARROW PHONE SCREENS (<= 420px, e.g. iPhone SE, Galaxy A) */
+@media (max-width: 420px) {
+  .wrap {
+    padding: 0 12px;
+  }
+
+  .header-inner-fluid {
+    padding: 0 10px;
+  }
+
+  .brand-script {
+    font-size: 1.05rem;
+  }
+
+  .brand-script span {
+    font-size: 0.62rem;
+  }
+
+  .bento-card.tall {
+    padding: 20px 14px;
+  }
+
+  .tall-welcome {
+    font-size: 1.38rem;
+  }
+
+  .tall-subtitle {
+    font-size: 0.88rem;
+  }
+
+  .focus-card-green {
+    padding: 20px 14px;
+  }
+
+  .focus-headline-col h3 {
+    font-size: 1.28rem;
+  }
+
   .consultation-box {
-    padding: 28px 20px;
+    padding: 20px 14px;
   }
-  .bar-row-omara {
-    grid-template-columns: 1fr;
-    gap: 6px;
+
+  .floating-contact-pill {
+    padding: 10px 16px;
+    font-size: 0.82rem;
+    right: 16px;
+    bottom: 16px;
   }
-  .bar-count-omara {
-    text-align: left;
-  }
-  .courts-grid-omara {
-    grid-template-columns: 1fr;
+
+  .accessibility-icon-corner {
+    left: 14px;
+    bottom: 14px;
+    width: 32px;
+    height: 32px;
   }
 }

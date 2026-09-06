@@ -23,9 +23,9 @@ export default function Hero({ lang }) {
     <section className="hero-omara" id="hero" onMouseMove={handleMouseMove}>
       {/* Master Background - Rajasthan High Court Sabse Peeche with Slow Move Animation */}
       <div className="hero-master-bg-wrap" aria-hidden="true">
-        <img 
-          src="/images/rajasthan-high-court.jpg" 
-          alt="Rajasthan High Court Background" 
+        <img
+          src="/images/rajasthan-high-court.jpg"
+          alt="Rajasthan High Court Background"
           className="hero-master-bg-img"
         />
         <div className="hero-master-bg-overlay" />
@@ -42,7 +42,7 @@ export default function Hero({ lang }) {
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="13" height="13">
                 <path d="M12 3v17M4 7h16M4 7l-2 7h6l-2-7zm12 0l-2 7h6l-2-7zM7 21h10" />
               </svg>
-              <span>{lang === 'hi' ? 'राजस्थान उच्च न्यायालय एवं जिला न्यायालय' : 'Rajasthan High Court & District Courts'}</span>
+              <span>{lang === 'hi' ? 'जिला न्यायालय' : 'District Court'}</span>
             </div>
 
             {/* Welcome Text */}

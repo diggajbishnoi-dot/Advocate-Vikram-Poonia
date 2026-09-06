@@ -128,7 +128,7 @@ export default function Header({ lang, setLang }) {
             <a
               ref={contactBtnRef}
               href="#consultation"
-              className="btn-emerald-pill magnetic-btn shimmer-btn"
+              className="btn-emerald-pill magnetic-btn shimmer-btn header-contact-btn"
             >
               <span>{header.contactBtn[lang]}</span>
             </a>
