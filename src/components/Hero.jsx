@@ -67,18 +67,31 @@ export default function Hero({ lang }) {
             </div>
           </div>
 
-          {/* Card 2: Top Middle */}
-          <div className="bento-card item animate-rise" style={{ '--stagger': '0.2s' }}>
+          {/* Card 2: Top Middle - Client Chamber Consultation with Cleaned Photo */}
+          <div className="bento-card item card-has-photo animate-rise" style={{ '--stagger': '0.2s' }}>
+            {/* Consultation Visual Photo */}
+            <div className="card-photo-bg-wrap" aria-hidden="true">
+              <img
+                src="/images/chamber-consultation.jpg"
+                alt="Client Chamber Consultation"
+                className="card-bg-photo"
+              />
+              <div className="card-photo-gradient-overlay" />
+            </div>
+
             <div className="card-spotlight-glow" aria-hidden="true" />
-            <div className="placeholder-inner-frame">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                <circle cx="9" cy="7" r="4"></circle>
-                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-              </svg>
-              <span className="placeholder-title">{cards[1].label[lang]}</span>
-              <span className="placeholder-sub">{cards[1].sub[lang]}</span>
+
+            <div className="card-photo-content">
+              <div className="card-photo-icon-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" width="18" height="18">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+              </div>
+              <span className="card-photo-title">{cards[1].label[lang]}</span>
+              <span className="card-photo-sub">{cards[1].sub[lang]}</span>
             </div>
           </div>
 
