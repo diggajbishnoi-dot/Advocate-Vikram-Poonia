@@ -95,17 +95,30 @@ export default function Hero({ lang }) {
             </div>
           </div>
 
-          {/* Card 3: Top Right */}
-          <div className="bento-card item animate-rise" style={{ '--stagger': '0.3s' }}>
+          {/* Card 3: Top Right - District & Sessions Courtroom with Photo */}
+          <div className="bento-card item card-has-photo animate-rise" style={{ '--stagger': '0.3s' }}>
+            {/* Courtroom Visual Photo */}
+            <div className="card-photo-bg-wrap" aria-hidden="true">
+              <img
+                src="/images/courtroom-appearances.jpg"
+                alt="District & Sessions Courtroom"
+                className="card-bg-photo"
+              />
+              <div className="card-photo-gradient-overlay" />
+            </div>
+
             <div className="card-spotlight-glow" aria-hidden="true" />
-            <div className="placeholder-inner-frame">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
-                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-                <line x1="8" y1="21" x2="16" y2="21"></line>
-                <line x1="12" y1="17" x2="12" y2="21"></line>
-              </svg>
-              <span className="placeholder-title">{cards[2].label[lang]}</span>
-              <span className="placeholder-sub">{cards[2].sub[lang]}</span>
+
+            <div className="card-photo-content">
+              <div className="card-photo-icon-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" width="18" height="18">
+                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                  <line x1="8" y1="21" x2="16" y2="21"></line>
+                  <line x1="12" y1="17" x2="12" y2="21"></line>
+                </svg>
+              </div>
+              <span className="card-photo-title">{cards[2].label[lang]}</span>
+              <span className="card-photo-sub">{cards[2].sub[lang]}</span>
             </div>
           </div>
 
