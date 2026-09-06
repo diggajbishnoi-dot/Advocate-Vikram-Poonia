@@ -132,7 +132,8 @@ export const content = {
           hi: "पारिवारिक विवादों, भरण-पोषण याचिकाओं एवं घरेलू विवादों में हम सर्वोच्च गोपनीयता, संवेदनशीलता एवं वित्तीय संरक्षण प्रदान करते हैं। जहाँ संभव हो सम्मानजनक मध्यस्थता और न्यायालय में सशक्त पैरवी।"
         },
         btn: { en: "Learn More about Family Law", hi: "पारिवारिक विधि के बारे में जानें" },
-        placeholderLabel: { en: "Matrimonial Settlement & Court Chamber", hi: "वैवाहिक समझौता एवं चैंबर परामर्श" }
+        placeholderLabel: { en: "Matrimonial Settlement & Court Chamber", hi: "वैवाहिक समझौता एवं चैंबर परामर्श" },
+        image: "/images/family-marital-settlement.jpg"
       },
       {
         num: "03",
