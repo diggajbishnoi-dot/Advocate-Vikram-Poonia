@@ -122,19 +122,33 @@ export default function Hero({ lang }) {
             </div>
           </div>
 
-          {/* Card 4: Bottom Middle */}
-          <div className="bento-card item animate-rise" style={{ '--stagger': '0.4s' }}>
+          {/* Card 4: Bottom Middle - Associate Counsel & Bar Record with Photo */}
+          <div className="bento-card item card-has-photo animate-rise" style={{ '--stagger': '0.4s' }}>
+            {/* Bar Association Felicitation Visual Photo */}
+            <div className="card-photo-bg-wrap" aria-hidden="true">
+              <img
+                src="/images/bar-association-felicitation.jpg"
+                alt="Bar Association Sri Ganganagar Felicitation"
+                className="card-bg-photo"
+                style={{ objectPosition: 'center 35%' }}
+              />
+              <div className="card-photo-gradient-overlay" />
+            </div>
+
             <div className="card-spotlight-glow" aria-hidden="true" />
-            <div className="placeholder-inner-frame">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                <polyline points="14 2 14 8 20 8"></polyline>
-                <line x1="16" y1="13" x2="8" y2="13"></line>
-                <line x1="16" y1="17" x2="8" y2="17"></line>
-                <polyline points="10 9 9 9 8 9"></polyline>
-              </svg>
-              <span className="placeholder-title">{cards[3].label[lang]}</span>
-              <span className="placeholder-sub">{cards[3].sub[lang]}</span>
+
+            <div className="card-photo-content">
+              <div className="card-photo-icon-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" width="18" height="18">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                  <line x1="16" y1="13" x2="8" y2="13"></line>
+                  <line x1="16" y1="17" x2="8" y2="17"></line>
+                  <polyline points="10 9 9 9 8 9"></polyline>
+                </svg>
+              </div>
+              <span className="card-photo-title">{cards[3].label[lang]}</span>
+              <span className="card-photo-sub">{cards[3].sub[lang]}</span>
             </div>
           </div>
 
