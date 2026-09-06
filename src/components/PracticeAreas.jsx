@@ -25,15 +25,25 @@ export default function PracticeAreas({ lang, onSelectMatter }) {
 
               {/* 3-Column Internal Layout */}
               <div className="focus-card-layout">
-                {/* Column 1: Image / Placeholder Frame */}
-                <div className="focus-img-placeholder">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-                    <circle cx="8.5" cy="8.5" r="1.5"></circle>
-                    <polyline points="21 15 16 10 5 21"></polyline>
-                  </svg>
-                  <span>{card.placeholderLabel[lang]}</span>
-                </div>
+                {/* Column 1: Image / Illustration Frame */}
+                {card.image ? (
+                  <div className="focus-img-real-frame">
+                    <img
+                      src={card.image}
+                      alt={card.tag[lang]}
+                      className="focus-card-illustration"
+                    />
+                  </div>
+                ) : (
+                  <div className="focus-img-placeholder">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                      <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                      <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                      <polyline points="21 15 16 10 5 21"></polyline>
+                    </svg>
+                    <span>{card.placeholderLabel[lang]}</span>
+                  </div>
+                )}
 
                 {/* Column 2: Big Serif Headline */}
                 <div className="focus-headline-col">

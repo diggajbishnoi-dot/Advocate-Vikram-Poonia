@@ -144,7 +144,8 @@ export const content = {
           hi: "अग्रिम जमानत (धारा 438 CrPC) एवं नियमित जमानत (धारा 439) हमारा सर्वाधिक संभाला जाने वाला क्षेत्र है। बिना किसी प्रक्रियात्मक देरी के व्यक्तिगत स्वतंत्रता की सुरक्षा हेतु त्वरित आवेदन दाखिल किए जाते हैं।"
         },
         btn: { en: "Learn More about Bail Applications", hi: "जमानत याचिकाओं के बारे में जानें" },
-        placeholderLabel: { en: "Urgent Bail Petition & Sessions Bench", hi: "तत्काल जमानत याचिका एवं सत्र पीठ" }
+        placeholderLabel: { en: "Urgent Bail Petition & Sessions Bench", hi: "तत्काल जमानत याचिका एवं सत्र पीठ" },
+        image: "/images/bail-in-india-card.png"
       },
       {
         num: "04",
