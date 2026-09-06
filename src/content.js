@@ -134,7 +134,7 @@ export const content = {
         },
         btn: { en: "Learn More about Family Law", hi: "पारिवारिक विधि के बारे में जानें" },
         placeholderLabel: { en: "Matrimonial Settlement & Court Chamber", hi: "वैवाहिक समझौता एवं चैंबर परामर्श" },
-        image: "/images/family-marital-settlement.jpg"
+        image: "/images/family-marital-settlement.png"
       },
       {
         num: "03",
@@ -160,7 +160,7 @@ export const content = {
         },
         btn: { en: "Learn More about Special Courts", hi: "विशेष न्यायालयीन बचाव के बारे में जानें" },
         placeholderLabel: { en: "Special Statutory Trial Court Defense", hi: "विशेष न्यायालयीन ट्रायल बचाव" },
-        image: "/images/special-courts-defense.jpg"
+        image: "/images/special-courts-defense.png"
       }
     ]
   },

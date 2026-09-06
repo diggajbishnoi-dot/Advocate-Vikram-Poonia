@@ -100,9 +100,10 @@ export default function Hero({ lang }) {
             {/* Courtroom Visual Photo */}
             <div className="card-photo-bg-wrap" aria-hidden="true">
               <img
-                src="/images/courtroom-appearances.jpg"
+                src="/images/courtroom-appearances.png"
                 alt="District & Sessions Courtroom"
                 className="card-bg-photo"
+                style={{ objectPosition: 'center 32%' }}
               />
               <div className="card-photo-gradient-overlay" />
             </div>
@@ -127,10 +128,10 @@ export default function Hero({ lang }) {
             {/* Bar Association Felicitation Visual Photo */}
             <div className="card-photo-bg-wrap" aria-hidden="true">
               <img
-                src="/images/bar-association-felicitation.jpg"
+                src="/images/bar-association-felicitation.png"
                 alt="Bar Association Sri Ganganagar Felicitation"
                 className="card-bg-photo"
-                style={{ objectPosition: 'center 35%' }}
+                style={{ objectPosition: 'center 32%' }}
               />
               <div className="card-photo-gradient-overlay" />
             </div>
@@ -152,16 +153,30 @@ export default function Hero({ lang }) {
             </div>
           </div>
 
-          {/* Card 5: Bottom Right (Contact Us button removed as requested) */}
-          <div className="bento-card item animate-rise" style={{ '--stagger': '0.5s' }}>
+          {/* Card 5: Bottom Right - Legal Briefs & Filing Desk with Photo */}
+          <div className="bento-card item card-has-photo animate-rise" style={{ '--stagger': '0.5s' }}>
+            {/* Legal Briefs & Desk Visual Photo */}
+            <div className="card-photo-bg-wrap" aria-hidden="true">
+              <img
+                src="/images/legal-briefs-filing.png"
+                alt="Legal Briefs & Filing Desk"
+                className="card-bg-photo"
+                style={{ objectPosition: 'center 45%' }}
+              />
+              <div className="card-photo-gradient-overlay" />
+            </div>
+
             <div className="card-spotlight-glow" aria-hidden="true" />
-            <div className="placeholder-inner-frame">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M12 20h9"></path>
-                <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
-              </svg>
-              <span className="placeholder-title">{cards[4].label[lang]}</span>
-              <span className="placeholder-sub">{cards[4].sub[lang]}</span>
+
+            <div className="card-photo-content">
+              <div className="card-photo-icon-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" width="18" height="18">
+                  <path d="M12 20h9"></path>
+                  <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
+                </svg>
+              </div>
+              <span className="card-photo-title">{cards[4].label[lang]}</span>
+              <span className="card-photo-sub">{cards[4].sub[lang]}</span>
             </div>
           </div>
         </div>

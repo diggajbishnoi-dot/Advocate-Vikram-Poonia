@@ -2081,20 +2081,44 @@ textarea.input-omara {
 /* -------------------------------------------------------------
    RESPONSIVE MEDIA QUERIES
 ------------------------------------------------------------- */
+/* -------------------------------------------------------------
+   RESPONSIVE MEDIA QUERIES & MOBILE OPTIMIZATION
+------------------------------------------------------------- */
+
+/* Touch & Mobile Cursor Handling */
+@media (pointer: coarse), (max-width: 768px) {
+  .custom-cursor-dot,
+  .custom-cursor-ring {
+    display: none !important;
+  }
+}
+
+/* Tablet Breakpoint (1024px) */
 @media (max-width: 1024px) {
+  .wrap {
+    padding: 0 20px;
+  }
+
   .bento-grid {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
+    gap: 16px;
   }
 
   .bento-card.tall {
     grid-column: span 2;
-    min-height: 380px;
+    min-height: 420px;
   }
 
   .focus-card-layout {
     grid-template-columns: 1fr;
     gap: 24px;
+  }
+
+  .focus-img-real-frame {
+    width: 100%;
+    max-width: 380px;
+    margin: 0 auto;
   }
 
   .focus-header-omara {
@@ -2112,32 +2136,289 @@ textarea.input-omara {
   .metric-strip-omara {
     grid-template-columns: 1fr;
   }
+
+  .overlay-main-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
 }
 
+/* Mobile Devices & Small Tablets (768px and below) */
 @media (max-width: 768px) {
+  html, body, #root, .site-wrapper {
+    overflow-x: hidden !important;
+    width: 100%;
+  }
+
+  .wrap {
+    padding: 0 16px;
+  }
+
+  /* Header adjustments */
+  .site-header {
+    padding: 10px 0;
+  }
+
+  .header-inner-fluid {
+    padding: 0 16px;
+  }
 
   .desktop-nav-links,
   .header-referral-link,
   .header-phone-link {
-    display: none;
+    display: none !important;
+  }
+
+  .brand-omara .brand-script {
+    font-size: clamp(1.1rem, 4.8vw, 1.4rem);
+    letter-spacing: -0.02em;
+  }
+
+  .brand-omara .brand-script span {
+    font-size: 0.72rem;
+  }
+
+  .header-contact-btn {
+    padding: 8px 14px;
+    font-size: 0.8rem;
+  }
+
+  .lang-switch-pill {
+    height: 32px;
+  }
+
+  .lang-switch-pill button {
+    padding: 0 10px;
+    font-size: 0.75rem;
+  }
+
+  .hamburger-btn {
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+  }
+
+  /* Fullscreen mobile drawer */
+  .fullscreen-nav-overlay {
+    padding: 20px 16px;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .overlay-topbar {
+    margin-bottom: 24px;
+  }
+
+  .overlay-main-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .overlay-nav-list {
+    gap: 12px;
+  }
+
+  .overlay-nav-item a {
+    font-size: 1.25rem;
+    padding: 10px 0;
+  }
+
+  /* Hero Section */
+  .hero-omara {
+    padding-top: 80px;
+    padding-bottom: 40px;
   }
 
   .bento-grid {
     grid-template-columns: 1fr;
+    gap: 14px;
   }
 
   .bento-card.tall {
     grid-column: span 1;
+    min-height: 390px;
+    padding: 24px 20px;
+  }
+
+  .tall-portrait-img {
+    object-position: center 18%;
+  }
+
+  .tall-welcome {
+    font-size: clamp(1.7rem, 6.5vw, 2.3rem);
+    line-height: 1.2;
+  }
+
+  .tall-sub {
+    font-size: 0.95rem;
+  }
+
+  .bento-card.item {
+    min-height: 200px;
+    height: 210px;
+  }
+
+  .card-photo-content {
+    padding: 14px 16px;
+  }
+
+  .card-photo-title {
+    font-size: 1.05rem;
+  }
+
+  .card-photo-sub {
+    font-size: 0.82rem;
+  }
+
+  /* Credentials / Metrics */
+  .credentials-section {
+    padding: 36px 0;
+  }
+
+  .credentials-grid-omara {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+
+  .credential-item-omara {
+    padding: 18px 14px;
+  }
+
+  .credential-number {
+    font-size: clamp(1.8rem, 6vw, 2.4rem);
+  }
+
+  .credential-label {
+    font-size: 0.82rem;
+  }
+
+  /* Focus Areas (Practice Areas) */
+  .focus-areas-section {
+    padding: 48px 0;
+  }
+
+  .focus-card-green {
+    padding: 22px 18px;
+    border-radius: 12px;
+  }
+
+  .focus-card-top-tag {
+    margin-bottom: 16px;
+    font-size: 0.84rem;
+  }
+
+  .focus-card-layout {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .focus-img-real-frame {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+    aspect-ratio: 4 / 3.4;
+  }
+
+  .focus-headline-col h3 {
+    font-size: clamp(1.4rem, 5.2vw, 1.85rem);
+    line-height: 1.25;
+  }
+
+  .focus-subhead {
+    font-size: 0.98rem;
+    margin-top: 4px;
+  }
+
+  .focus-body-col p {
+    font-size: 0.92rem;
+    line-height: 1.6;
+    margin-bottom: 18px;
+  }
+
+  .btn-white-pill {
+    width: 100%;
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 0.92rem;
+    padding: 12px 20px;
+    border-radius: 9999px;
+  }
+
+  /* Testimonials */
+  .testimonials-section {
+    padding: 44px 0;
+  }
+
+  .testimonials-header-omara {
+    margin-bottom: 28px;
+  }
+
+  .testimonial-card-omara {
+    padding: 24px 18px;
+  }
+
+  .testimonial-quote {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .testimonials-nav-btns {
+    gap: 12px;
+  }
+
+  .nav-btn-circle {
+    width: 44px;
+    height: 44px;
+  }
+
+  /* Consultation Form */
+  .consultation-section {
+    padding: 44px 0;
+  }
+
+  .consultation-box {
+    padding: 24px 16px;
+    border-radius: 14px;
   }
 
   .form-grid-2 {
     grid-template-columns: 1fr;
+    gap: 14px;
   }
 
-  .consultation-box {
-    padding: 28px 20px;
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    font-size: 16px !important; /* Prevents auto-zoom in iOS Safari */
+    min-height: 46px;
+    padding: 10px 14px;
   }
 
+  .form-group textarea {
+    min-height: 90px;
+  }
+
+  .form-chips-wrap {
+    gap: 8px;
+  }
+
+  .chip-btn {
+    padding: 8px 14px;
+    font-size: 0.82rem;
+    min-height: 40px;
+  }
+
+  .btn-submit-consultation {
+    width: 100%;
+    min-height: 52px;
+    font-size: 1rem;
+    justify-content: center;
+  }
+
+  /* Bar Row & Courts */
   .bar-row-omara {
     grid-template-columns: 1fr;
     gap: 6px;
@@ -2149,5 +2430,97 @@ textarea.input-omara {
 
   .courts-grid-omara {
     grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  /* Footer */
+  .site-footer {
+    padding: 36px 0 env(safe-area-inset-bottom, 24px);
+  }
+
+  .footer-bottom-flex {
+    flex-direction: column;
+    gap: 14px;
+    text-align: center;
+  }
+
+  /* Floating icon */
+  .accessibility-icon-corner {
+    bottom: calc(14px + env(safe-area-inset-bottom, 0px));
+    left: 14px;
+    width: 42px;
+    height: 42px;
+  }
+}
+
+/* Compact Smartphones (480px and below) */
+@media (max-width: 480px) {
+  .wrap {
+    padding: 0 14px;
+  }
+
+  .header-inner-fluid {
+    padding: 0 12px;
+  }
+
+  .header-contact-btn {
+    display: none !important; /* Accessible inside the hamburger drawer to keep header clean */
+  }
+
+  .credentials-grid-omara {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .bento-card.tall {
+    min-height: 360px;
+    padding: 20px 16px;
+  }
+
+  .tall-top-tag {
+    font-size: 0.75rem;
+    padding: 4px 10px;
+  }
+
+  .tall-welcome {
+    font-size: clamp(1.55rem, 7.5vw, 1.95rem);
+  }
+
+  .focus-img-real-frame {
+    max-width: 280px;
+  }
+
+  .chip-btn {
+    flex: 1 1 calc(50% - 8px);
+    text-align: center;
+    justify-content: center;
+  }
+}
+
+/* Ultra-compact / Small Screen Phones (360px and below) */
+@media (max-width: 360px) {
+  .wrap {
+    padding: 0 12px;
+  }
+
+  .brand-omara .brand-script {
+    font-size: 1.05rem;
+  }
+
+  .bento-card.tall {
+    min-height: 330px;
+    padding: 16px 12px;
+  }
+
+  .focus-card-green {
+    padding: 18px 12px;
+  }
+
+  .focus-img-real-frame {
+    max-width: 250px;
+  }
+
+  .consultation-box {
+    padding: 18px 12px;
   }
 }
