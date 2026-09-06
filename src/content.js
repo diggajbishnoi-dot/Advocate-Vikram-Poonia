@@ -3,7 +3,7 @@ export const content = {
     brandName: { en: "Vikram Poonia", hi: "विक्रम पूनिया" },
     brandSub: { en: "Advocate · Sri Ganganagar", hi: "अधिवक्ता · श्री गंगानगर" },
     referrals: { en: "Attorney Referrals / Inquiries", hi: "चैंबर आवेदन / संदर्भ" },
-    phone: "(+91) 98290 XXXXX",
+    phone: "+91 99828 82422",
     contactBtn: { en: "Contact Us", hi: "संपर्क करें" },
     nav: [
       {

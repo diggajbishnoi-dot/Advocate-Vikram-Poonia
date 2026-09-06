@@ -33,12 +33,22 @@ export default function Hero({ lang }) {
 
       <div className="wrap hero-wrap-content">
         <div className="bento-grid" ref={gridRef}>
-          {/* Tall Card on Left (Span 2 rows) */}
+          {/* Tall Card on Left (Span 2 rows) with Advocate Vikram Poonia Portrait */}
           <div className="bento-card tall animate-rise" style={{ '--stagger': '0.1s' }}>
+            {/* Advocate Portrait Visual Background */}
+            <div className="tall-portrait-bg-wrap" aria-hidden="true">
+              <img
+                src="/images/advocate-vikram-poonia.jpg"
+                alt="Advocate Vikram Poonia"
+                className="tall-portrait-img"
+              />
+              <div className="tall-portrait-gradient-overlay" />
+            </div>
+
             <div className="card-spotlight-glow" aria-hidden="true" />
 
             {/* Top Pill Badge */}
-            <div className="tall-top-tag" style={{ marginBottom: 'auto' }}>
+            <div className="tall-top-tag">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="13" height="13">
                 <path d="M12 3v17M4 7h16M4 7l-2 7h6l-2-7zm12 0l-2 7h6l-2-7zM7 21h10" />
               </svg>
