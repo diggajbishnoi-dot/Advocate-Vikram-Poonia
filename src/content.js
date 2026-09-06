@@ -157,7 +157,8 @@ export const content = {
           hi: "श्री गंगानगर में एससी/एसटी एक्ट, पॉक्सो एक्ट एवं महिला अत्याचार मामलों के विशेष न्यायालयों में पैरवी, जहाँ झूठे आरोपों का खंडन साक्ष्यों एवं गहन जिरह के माध्यम से किया जाता है।"
         },
         btn: { en: "Learn More about Special Courts", hi: "विशेष न्यायालयीन बचाव के बारे में जानें" },
-        placeholderLabel: { en: "Special Statutory Trial Court Defense", hi: "विशेष न्यायालयीन ट्रायल बचाव" }
+        placeholderLabel: { en: "Special Statutory Trial Court Defense", hi: "विशेष न्यायालयीन ट्रायल बचाव" },
+        image: "/images/special-courts-defense.jpg"
       }
     ]
   },
