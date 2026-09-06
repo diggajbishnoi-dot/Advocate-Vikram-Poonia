@@ -5,7 +5,7 @@ export default function FloatingBar({ lang = 'en' }) {
   const [message, setMessage] = useState('');
   const chatRef = useRef(null);
 
-  const whatsappNumber = '918824597770';
+  const whatsappNumber = '919982882422';
 
   const defaultGreeting = lang === 'hi'
     ? 'नमस्ते एडवोकेट विक्रम पूनिया, मुझे विधिक परामर्श के संबंध में जानकारी चाहिए।'
@@ -176,7 +176,7 @@ export default function FloatingBar({ lang = 'en' }) {
               <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
                 <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.41a8.204 8.204 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.196 8.196 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.66c-.25-.13-1.47-.72-1.7-.8-.23-.09-.39-.13-.56.13-.17.25-.65.81-.8 1-.15.16-.3.18-.55.06-.25-.13-1.06-.39-2.02-1.24-.75-.67-1.26-1.49-1.41-1.74-.15-.25-.02-.39.11-.51.11-.11.25-.29.38-.44.13-.15.17-.25.25-.42.08-.17.04-.32-.02-.45-.06-.13-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.16 0-.43.06-.66.31-.22.25-.86.84-.86 2.06 0 1.21.88 2.39 1 2.56.13.17 1.74 2.66 4.22 3.73.59.25 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.07-.1-.22-.16-.47-.29z"/>
               </svg>
-              <span>{lang === 'hi' ? 'सीधे व्हाट्सएप पर बात करें' : 'Open Directly in WhatsApp (8824597770)'}</span>
+              <span>{lang === 'hi' ? 'सीधे व्हाट्सएप पर बात करें' : 'Open Directly in WhatsApp (99828 82422)'}</span>
             </a>
           </div>
         </div>
@@ -187,7 +187,7 @@ export default function FloatingBar({ lang = 'en' }) {
           className="whatsapp-fab-btn"
           onClick={() => setChatOpen(!chatOpen)}
           aria-label="Chat on WhatsApp with Advocate Vikram Poonia"
-          title="Chat on WhatsApp (+91 88245 97770)"
+          title="Chat on WhatsApp (+91 99828 82422)"
         >
           {/* Animated pulse ring */}
           <span className="wa-fab-pulse" aria-hidden="true" />
