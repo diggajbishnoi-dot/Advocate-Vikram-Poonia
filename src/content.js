@@ -120,7 +120,8 @@ export const content = {
           hi: "हमारे आपराधिक बचाव मुवक्किलों को त्वरित एवं रणनीतिक विधिक पैरवी का लाभ मिलता है, जो उच्च दबाव वाली परिस्थितियों में भी सर्वोत्तम परिणाम दिलाने के लिए तैयार की जाती है। एफआईआर दर्ज होने से लेकर ट्रायल निर्णय तक समर्पित पैरवी।"
         },
         btn: { en: "Learn More about Criminal Defense", hi: "आपराधिक बचाव के बारे में जानें" },
-        placeholderLabel: { en: "Criminal Case File & Evidence Scrutiny", hi: "आपराधिक केस फाइल एवं साक्ष्य समीक्षा" }
+        placeholderLabel: { en: "Criminal Case File & Evidence Scrutiny", hi: "आपराधिक केस फाइल एवं साक्ष्य समीक्षा" },
+        image: "/images/criminal-case-file.jpg"
       },
       {
         num: "02",
